@@ -8,25 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I am aaaaaa Postdoctoral Research Fellow in the
-[Weidenbaum Center on the Economy, Government, and Public Policy](https://wc.wustl.edu/) 
-and [Department of Political Science](https://polisci.wustl.edu/) at
-[Washington University in St. Louis](https://wustl.edu/). I am also an
-affiliated researcher with the
-[Data-driven Analysis of Peace Project](https://dapp-lab.org) lab. I specialize
-in International Relations and Political Methodology. I earned my Ph.D in
-Political Science from the
-[University *of* North Carolina *at* Chapel Hill](https://www.unc.edu/) and my
-B.A. in Political Science from [Haverford College](https://www.haverford.edu/).
+Research scholar working in AI and Data Analytics Lab, KLE Technological University. My primary research interest lies in Artificial Intelligence, focused on designing Neural Architecture Search (NAS) methods to automate the network architecture engineering for a given problem with multi-objective optimization. I am involved in Interdisciplinary Cyber-Physical Systems (ICPS), Department of Science and Technology, Govt. of India sponsored research project "Crowdsourcing Framework for Digital Archiving and Presentation of Cultural Heritage."
 
-My work has been [published](publications) or is forthcoming in
-*International Studies Quarterly*, *Conflict Management and Peace Science*,
-*Political Science Research and Methods*, and *PS: Political Science & Politics*,
-among other outlets. My [research](research) explores the causes and
-consequences of political violence using a broad variety of methods such as
-latent variable models, geospatial analysis, and big data. While I primarily
-focus on civil conflict, I also examine contentious political phenomena
-including terrorism and economic statecraft, and develop new measures of
-institutions in international relations. I have [teaching](teaching) experience
-in both international relations and quantitative methodology, and am a certified
-instructor with [The Carpentries](https://carpentries.org/).
+As Asst. Professor in the School of Computer Science and Engineering, I teach courses like Machine Learning, Distributed and Cloud Computing, Python & Shell Scripting, Data Integration, and Principles of Compiler Design. I have undergone a training program at Samsung Research Institute, Bangalore, to handle a course on Embedded Intelligence and mentor the student's worklet under the Samsung PRISM program.
+
+I have experience carrying out projects to build custom datasets for real-world problems, design transfer learning-based, and from-scratch (custom) CNN models for image classification tasks, implement binarized neural networks for edge devices, etc... I have published my work as research papers in various Web of Science and Scopus indexed book chapters, journals, and conference papers. I have pursued my master's degree from the National Institute of Technology Karnataka, Surathkal.
