@@ -88,7 +88,7 @@ author:
   location         : "Hubballi, India"
   employer         :
   pubmed           :
-  orcid            : "http://orcid.org/0000-0001-9259-3883"
+  orcid            : #"http://orcid.org/0000-0001-9259-3883"
   googlescholar    : "https://scholar.google.com/citations?user=5le1YmkAAAAJ&hl=en"
   email            : "svgurlahosur@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -112,7 +112,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "svgurlahosur"
+  twitter          : #"svgurlahosur"
   vine             :
   weibo            :
   xing             :
