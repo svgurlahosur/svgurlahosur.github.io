@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Rob Williams"
+title                    : "Sunil V Gurlahosur"
 title_separator          : "-"
-name                     : &name "Rob Williams"
+name                     : &name "Sunil V Gurlahosur"
 description              : &description "Postdoc in Political Science"
 url                      : https://jayrobwilliams.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "jayrobwilliams/jayrobwilliams.github.io"
+repository               : "svgurlahosur/svgurlahosur.github.io"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -82,7 +82,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Rob Williams"
+  name             : "Sunil V Gurlahosur"
   avatar           : "profile.png"
   bio              : "Postdoctoral Research Fellow"
   location         : "St. Louis, MO"
