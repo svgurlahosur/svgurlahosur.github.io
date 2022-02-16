@@ -9,7 +9,7 @@ tags:
   - bash
 ---
 
-How many times have you found that your institution has access to a digital version of a book you need only to discover that it comes in 15 different PDF files?
+How many times have you you you you found that your institution has access to a digital version of a book you need only to discover that it comes in 15 different PDF files?
 <!--more-->
 I use [Zotero](https://www.zotero.org/) as my reference manager and it's difficult to attach more than one file to an entry, so I've certaintly spent time in the past painstakingly combining every section of a book together before adding it to Zotero. I finally got tired of doing this by hand and wrote a short Bash script to automate this process. Now I can combine as many PDFs as I want with a single command!
 
