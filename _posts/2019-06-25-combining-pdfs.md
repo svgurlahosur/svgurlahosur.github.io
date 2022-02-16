@@ -1,57 +1,32 @@
 ---
-title: 'Combining PDF Documents'
-date: 2019-06-26
+title: 'Introduction to Machine Learning'
+date: 2022-02-16
 permalink: /posts/2019/06/combining-pdfs/
 excerpt_separator: <!--more-->
 toc: true
 tags:
-  - references
-  - bash
+  - Machine Learning
+  - Supervised Learning
+  - Unsupervised Learning
+  - Reinforcement Learning
+  - Semi-supervised Learning
 ---
 
-How many times have you you you you found that your institution has access to a digital version of a book you need only to discover that it comes in 15 different PDF files?
+This post will give a very brief introduction to Machine Learning, different types of Learning algorithms.
 <!--more-->
-I use [Zotero](https://www.zotero.org/) as my reference manager and it's difficult to attach more than one file to an entry, so I've certaintly spent time in the past painstakingly combining every section of a book together before adding it to Zotero. I finally got tired of doing this by hand and wrote a short Bash script to automate this process. Now I can combine as many PDFs as I want with a single command!
+In the field of Computer science, to solve a problem like sorting 100 numbers, matrix multiplication etc. engineers write programs that encode those set of rules to solve the problem and obtain solution. As the compexity of probelm starts increasing, it becomes very difficult to encode those rules like identifying whether cat is present in the given image or not, how many apples present in the picture.
 
-# How it works
+# Machine Learning
 
-My solution relies on [Ghostscript](https://www.ghostscript.com/) to combine multiple PDF files from the command line. On a Mac you can easily install Ghostscript using [Homebrew](https://brew.sh/) by running
+Hence instaed of writing the programs to solve these complex problemas, we go for Learning systems, which are not directly programmed to solve the problem but instead develop the own programs based upon the examples (data) and trial and error process (experience) to solve the problem.
 
-```bash
-brew install ghostscript
-```
+## Types of algorithms
 
-Once you've done that you've got everything you need. Create a shell script and put the following in it
+These learning system/learning algorithms in coreporates the information from the training samples into the system and produces program/algorithm that solves the problem. The produced algorithm might look different than typically handwritten programms by engineeers and they work for new data (samples). These learning algorithms can generlly categorized into following types,
 
-```bash
-#!/bin/bash
-if [[ $# -eq 0 ]]; then
-  gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf *.pdf
-else
-  gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$1 *.pdf
-fi
-```
+ 1. Supervised Learning
+ 2. Unsupervised Learning
+ 3. Semi-supervised Learning
+ 4. Reinforcement Learning 
 
-The script first checks if you've supplied an output filename as an argument, and if not uses the default name of `output.pdf`. Be aware of where you run this script as it will overwrite a file called `output.pdf` if it exists in the active directory! If you have supplied an output filename, it will use that instead of `output.pdf`.
-
-## Running it
-
-To actually run this script, there are two steps left:
-
-1. Make it executable
-2. Add it to your PATH
-
-Making your script executable is relatively straightforward. Use the `chmod +x` command in Terminal on your script. I saved mine as `PDFcombine.sh` so I ran `chmod +x PDFcombine.sh`. Putting your script on your PATH just ensures that your Terminal will be able to find it when you call it to combine PDF files. It's a little more complicated so I'll just link to this [excellent StackExchange answer](https://unix.stackexchange.com/a/26059) on how to do so. On my system this script lives in a directory in my Dropbox with similar other small utilities called `Bash`, so my `.bash_profile` has these lines in it
-
-```bash
-# custom bash scripts                                                           
-export PATH=$PATH:/Users/Rob/Dropbox/Methods/Bash
-```
-
-to add it to my PATH. As an added bonus Ghostscript will (usually) rotate any pages containing sideways tables or figures!
-
-# A warning
-
-This script will combine PDF files in the order that `ls *.pdf` returns them. By default, this will be an *alphabetic sort*, so the files 1.pdf, 2.pdf, and 10.pdf would be combined in the following order: 1.pdf, 10.pdf, 2.pdf.
-
-You can fix this by adding leading zeroes to all filenames so that each ID string is the same length. Most digital versions of books give you filenames like this, but be sure to check, otherwise your combined PDF might require a lot of skipping around. This script can be written to perform a *natural sort* of input files, but the code to do so is more complex, so I'll cover it in a future post.
+In a Supervised learning algorithm, to solve problems, it always needs data that contains both input and respective output to build the hypothesis (model). The hypothesis can solve the problem (predict output) for a new set of inputs. 
