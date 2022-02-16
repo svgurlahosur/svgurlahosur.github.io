@@ -1,0 +1,40 @@
+---
+title: 'Introduction to Machine Learning'
+date: 2022-02-16
+permalink: /posts/2022/01/introduction/
+excerpt_separator: <!--more-->
+toc: true
+tags:
+  - references
+  - bash
+---
+
+This post will give a very brief introduction to Machine Learning, different types of Learning algorithms.
+<!--more-->
+
+In the field of Computer science, to solve a problem like sorting 100 numbers, matrix multiplication etc. engineers write programs that encode those set of rules to solve the problem and obtain solution. As the compexity of probelm starts increasing, it becomes very difficult to encode those rules like identifying whether cat is present in the given image or not, how many apples present in the picture.
+
+Hence instaed of writing the programs to solve these complex problemas, we go for Learning systems, which are not directly programmed to solve the problem but instead develop the own programs based upon the examples (data) and trial and error process (experience) to solve the problem.
+
+These learning system/learning algorithms in coreporates the information from the training samples into the system and produces program/algorithm that solves the problem. The produced algorithm might look different than typically handwritten programms by engineeers and they work for new data (samples). These learning algorithms can generlly categorized into following types,
+
+# How it works
+sasa
+
+1. Supervised Learning
+2. Unsupervised Learning
+3. Semi-supervised Learning
+4. Reinforcement Learning
+
+
+
+## Running it
+
+In a Supervised learning algorithm, to solve problems, it always needs data that contains both input and respective output to build the hypothesis (model). The hypothesis can solve the problem (predict output) for a new set of inputs. 
+
+
+
+# A warning
+
+This script will combine PDF files in the order.
+
