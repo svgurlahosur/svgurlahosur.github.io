@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Sunil V Gurlahosur"
 title_separator          : "-"
 name                     : &name "Sunil V Gurlahosur"
-description              : &description "Postdoc in Political Science"
+description              : &description "Researcher, Asst. Professor"
 url                      : https://svgurlahosur.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "svgurlahosur/svgurlahosur.github.io"
@@ -73,11 +73,11 @@ social:
 
 # Analytics
 analytics:
-  provider               : "goatcounter" # false (default), "google", "google-universal", "custom", "goatcounter"
+  provider               : #"goatcounter" # false (default), "google", "google-universal", "custom", "goatcounter"
   google:
     tracking_id          : 
   goatcounter:
-    code		 : jayrobwilliams
+    code		 : #jayrobwilliams
 
 
 # Site Author
