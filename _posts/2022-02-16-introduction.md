@@ -5,36 +5,27 @@ permalink: /posts/2022/01/introduction/
 excerpt_separator: <!--more-->
 toc: true
 tags:
-  - references
-  - bash
+  - machine learning
+  - model
+  - supervised learning
+  - unsupervised learning
+  - reinforcement learning
 ---
 
-This post will give a very brief introduction to Machine Learning, different types of Learning algorithms.
+This post will give a very brief introduction to Machine Learning.
 <!--more-->
 
-In the field of Computer science, to solve a problem like sorting 100 numbers, matrix multiplication etc. engineers write programs that encode those set of rules to solve the problem and obtain solution. As the compexity of probelm starts increasing, it becomes very difficult to encode those rules like identifying whether cat is present in the given image or not, how many apples present in the picture.
+In the field of Computer science, to solve simple problems like the addition of numbers, sorting of numbers, matrix multiplication,  etc., engineers write programs that encode those set of rules to solve the problem and obtain the solution. As the complexity of problems increases, it becomes very difficult to encode those rules, like identifying whether cat is present in the given image or not and how many apples are present in the picture.
 
-Hence instaed of writing the programs to solve these complex problemas, we go for Learning systems, which are not directly programmed to solve the problem but instead develop the own programs based upon the examples (data) and trial and error process (experience) to solve the problem.
-
-These learning system/learning algorithms in coreporates the information from the training samples into the system and produces program/algorithm that solves the problem. The produced algorithm might look different than typically handwritten programms by engineeers and they work for new data (samples). These learning algorithms can generlly categorized into following types,
-
-# How it works
-sasa
-
-1. Supervised Learning
-2. Unsupervised Learning
-3. Semi-supervised Learning
-4. Reinforcement Learning
+Hence instead of writing the programs to solve these complex problems, we approach learning systems, which are not directly programmed to solve the problem but rather develop their programs based upon the examples (data) and trial and error process (experience) to solve the problem.
+These learning system/learning algorithms incorporate the training samples' information into the system and produce a program/algorithm that solves the problem. The designed algorithm might look different from the typically handwritten program by engineers, and they work very well for new data (samples). 
 
 
-
-## Running it
-
-In a Supervised learning algorithm, to solve problems, it always needs data that contains both input and respective output to build the hypothesis (model). The hypothesis can solve the problem (predict output) for a new set of inputs. 
+![](/images/posts/introduction/picture1.png){: .align-center } 
 
 
+# Types of machine learning algorithms
 
-# A warning
-
-This script will combine PDF files in the order.
-
+1. Supervised Learning: It is trained on labeled data (input and respective output) to learn relationships and dependencies between the target prediction output and the input features.
+2. Unsupervised Learning: It is trained on untagged data to analyze, learn patterns, and cluster the unlabeled datasets. These algorithms discover hidden patterns or data groupings without the need for human intervention.
+3. Reinforcement Learning: This algorithm improves upon itself and learns from new situations using a trial-and-error method. It iteratively learns from the environment where the favorable outputs are encouraged or ‘reinforced,’ and non-favorable outputs are discouraged or ‘punished’ to maximize the notion of cumulative reward.
