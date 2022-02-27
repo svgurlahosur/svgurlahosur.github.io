@@ -21,7 +21,7 @@ Hence instead of writing the programs to solve these complex problems, we approa
 These learning system/learning algorithms incorporate the training samples' information into the system and produce a program/algorithm that solves the problem. The designed algorithm might look different from the typically handwritten program by engineers, and they work very well for new data (samples). 
 
 
-![](/images/posts/introduction/picture1.png){: .align-center } 
+<img src="/images/posts/introduction/picture1.png" alt="drawing" style="width:600px;"/>
 
 
 # Types of machine learning algorithms
