@@ -182,10 +182,27 @@ The learning algorithm will be initialized with a predefined number of epochs an
 <script src="https://gist.github.com/svgurlahosur/0543b0f601292723e6bf59a670679849.js"></script>
 
 
+    ## [1] Epoch: 10 Training error: 3.7689470338877387 0.09422367584719346 Testing_error: 3.3261063075489092 Parameters: [1.4035586149969341, 9.789259471821223, 3.875418495881803, 8.638135375187337]
+    ## [2] Epoch: 20 Training error: 2.0175238165739398 0.050438095414348495 Testing_error: 1.9598604430879836 Parameters: [1.3548566916116433, 9.715662275323327, 4.6655883649029395, 8.49529278286465]
+    ## [3] Epoch: 30 Training error: 1.2902958925587842 0.03225739731396961 Testing_error: 1.4789717803567366 Parameters: [1.310219278149191, 9.622600723949207, 5.1742748799853215, 8.43168764311217]
+    ## [4] Epoch: 40 Training error: 0.9915389458728094 0.024788473646820235 Testing_error: 1.2953993094257057 Parameters: [1.266895051995625, 9.560501390766953, 5.502509407456777, 8.393644390601194]
+    ## [5] Epoch: 50 Training error: 0.8693544103073194 0.021733860257682987 Testing_error: 1.2271077013546419 Parameters: [1.2247045136869261, 9.52069800869814, 5.714321251775768, 8.370701194512849]
+    ## [6]
+    ## [7]
+    ## [8]
+    ## [9] -----------------------------------------------------Training Finished-----------------------------------------------------
+    ## [10] 
+    ## [11] Best error: 0.8693544103073194 at epoch: 50 with parameters values [1.2247045136869261, 9.52069800869814, 5.714321251775768, 8.370701194512849]
+    ## [12]
+    ## [13] ---------------------------------------------------------------------------------------------------------------------------
+
+
 Graph plot to visualize how the training and testing errors are decresing as the model starts training.
 
 
 <script src="https://gist.github.com/svgurlahosur/8391512a1056ceb4185eb4672dd20f29.js"></script>
 
+
+<img src="/images/posts/linear-regression/picture3.png" alt="drawing" style="width:550px;"/>
 
 The complete code for stochastic gradient descent algorithm can be found [here.](https://github.com/svgurlahosur/Linear-regression/blob/main/Stochastic_Gradient_Descent.py) 
