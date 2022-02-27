@@ -46,6 +46,8 @@ Instead of a single feature, if we collect multiple features(qualities) of an em
 
 <script src="https://gist.github.com/svgurlahosur/0dbea9d41815a0019270ee2b17990ce4.js"></script>
 
+Visit the [training data](https://github.com/svgurlahosur/Linear-regression/blob/main/train_salary.csv) and [testing data](https://github.com/svgurlahosur/Linear-regression/blob/main/test_salary.csv) for the complete data.
+
 
 ## 2. Model/hypothesis represenation
 
