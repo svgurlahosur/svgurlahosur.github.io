@@ -27,5 +27,8 @@ These learning system/learning algorithms incorporate the training samples' info
 # Types of machine learning algorithms
 
 **1. Supervised Learning:** It is trained on labeled data (input and respective output) to learn relationships and dependencies between the target prediction output and the input features.
+
 **2. Unsupervised Learning:** It is trained on untagged data to analyze, learn patterns, and cluster the unlabeled datasets. These algorithms discover hidden patterns or data groupings without the need for human intervention.
+
+
 **3. Reinforcement Learning:** This algorithm improves upon itself and learns from new situations using a trial-and-error method. It iteratively learns from the environment where the favorable outputs are encouraged or ‘reinforced,’ and non-favorable outputs are discouraged or ‘punished’ to maximize the notion of cumulative reward.
