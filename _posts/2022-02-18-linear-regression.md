@@ -34,11 +34,11 @@ In all the examples, output/predicted values are continuous; hence Linear regres
 
 Let's consider/collect data records of salary provided by the company to emplyoees based upon the only single features of employees like years of experience. Since we are using single feature to predict salary of emplyoyee, we call this Univariate Linear regression.
 
-<img src="/images/posts/linear-regression/picture1.png" alt="drawing" style="width:300px;"/>
+<img src="/images/posts/linear-regression/picture1.png" alt="drawing" style="width:280px;"/>
 
 Instead of a single feature, if we collect multiple features(qualities) of an employee to predict the salary, we call it multi-variate linear regression.
 
-<img src="/images/posts/linear-regression/picture2.png" alt="drawing" style="width:550px;"/>
+<img src="/images/posts/linear-regression/picture2.png" alt="drawing" style="width:500px;"/>
 
 ***Note:*** 
 1. Number of samples range from 1, 2, 3, 4, . . . ., m
@@ -70,15 +70,15 @@ The learning algorithm finds the optimal parameters in the hypothesis such that 
 
 **1. Stochastic gradient descent:** A single sample is used to predict model output, calculate the error, and optimize the model parameters.
 
-<img src="/images/posts/linear-regression/picture4.png" alt="drawing" style="width:750px;"/>
+<img src="/images/posts/linear-regression/picture4.png" alt="drawing" style="width:740px;"/>
 
 **2. Batch gradient descent:** All the samples are used to predict model output, calculate error and optimize the model parameters.
 
-<img src="/images/posts/linear-regression/picture5.png" alt="drawing" style="width:750px;"/>
+<img src="/images/posts/linear-regression/picture5.png" alt="drawing" style="width:740px;"/>
 
 **3. Mini batch gradient:** Batch of samples(m) are used to predict model output, calculate the error and optimize the model parameters.
 
-<img src="/images/posts/linear-regression/picture6.png" alt="drawing" style="width:750px;"/>
+<img src="/images/posts/linear-regression/picture6.png" alt="drawing" style="width:740px;"/>
 
 **Note:** All the code snippets in the subsequent sections is for the Stochastic gradient descent algorithm and refer the [Batch gradient descent](https://github.com/svgurlahosur/Linear-regression/blob/main/Batch_Gradient_Descent.py) and [Mini batch gradient](https://github.com/svgurlahosur/Linear-regression/blob/main/Mini_Batch_Gradient_Descent.py) for respective implementaion.
 
