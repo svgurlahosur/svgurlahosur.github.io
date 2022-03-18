@@ -15,20 +15,20 @@ This post provides an discussion on the Linear Regression algorithm and its impl
 <!--more-->
 
 # Introduction
-Linear Regression is a Supervised Learning algorithm used to solve problems where for every input(X), the respective outputs (Y) values are always discrete, and Logistic Regression is employed when output (Y) values are continuous. To understand Linear Regression, let us look into some real-world problems solved with this algorithm's help.
+Linear Regression is a Supervised Learning algorithm used to solve problems where for every input(X), the respective outputs (Y) values are always continous, and Logistic Regression is employed when output (Y) values are discrete. To understand Linear Regression algorithm, let us look into some real-world problems solved with this algorithm's help.
 
 - Number of customers visiting the shop --> Profit for the shop owner
 - Size of pizza --> Price of pizza
 - Years of experience --> Salary of an employee
 - Area of the house --> Price of the house
 
+In all the examples, output/predicted values are continuous; hence Linear regression is used to build the machine learning model(hypothesis) and predict the output for a new set of inputs. To undersatnf the algorithm from practical perspective let us consider the problem of predicting an employee's salary based on various qualities of the employee. In order to solve this probelm we shoudl apply the following steps:
 
-In all the examples, output/predicted values are continuous; hence Linear regression is used to build the machine learning model(hypothesis) and predict the output for a new set of inputs. To solve the problem of predicting an employee's salary based on various qualities of the employee with a Linear regression algorithm, we should apply the following steps:
+1. Data collection
+2. Model/hypothesis represenation
+3. Cost function
+4. Optimization
 
- 1. Data collection
- 2. Model/hypothesis represenation
- 3. Cost function
- 4. Optimization
 
 ## 1. Data Collection
 
