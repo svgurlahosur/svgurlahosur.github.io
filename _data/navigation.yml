@@ -3,11 +3,11 @@ main:
   - title: "Posts"
     url: /posts/
     
-  #- title: "Research"
-  #  url: /research/
+  - title: "Research"
+    url: /research/
 
-  #- title: "Publications"
-  #  url: /publications/
+  - title: "Publications"
+    url: /publications/
 
-  #- title: "About me"
-  #  url: /aboutme/
+  - title: "About me"
+    url: /aboutme/
