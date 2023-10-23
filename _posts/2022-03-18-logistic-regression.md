@@ -1,5 +1,5 @@
 ---
-title: 'The Complete Logistic Regression Tutorial using Python: Understanding Mathematics, Building, Optimizing, and Interpreting Classification Models.'
+title: 'Complete Logistic Regression Tutorial using Python: Understanding Mathematics, Building, and Interpreting Classification Models.'
 date: 2022-03-18
 permalink: /posts/2022/03/logistic-regression/
 excerpt_separator: <!--more-->
