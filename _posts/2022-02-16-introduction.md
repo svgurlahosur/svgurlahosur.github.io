@@ -47,6 +47,9 @@ Building any Machine Learning model/hypothesis involves two main phases: trainin
 
 <img src="/images/posts/introduction/machine_learning.png" alt="drawing" style="width:700px;"/>
 
+$$
+Figure\text{ 1: Different phases during Machine Learning}
+$$
 
 In the training phase, the machine learning algorithm builds a model using the training data to make predictions or classifications depending on the type of algorithms built. It involves steps like data preprocessing, model training, and hyperparameter tuning to optimize the model's parameters for accurate predictions. The model is evaluated using various metrics, such as accuracy, MSE, precision, recall, and F1-score, depending on the ML algorithm.
 

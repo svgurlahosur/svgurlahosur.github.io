@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Logistic Regression'
+title: 'The Complete Logistic Regression Tutorial using Python: Understanding Mathematics, Building, Optimizing, and Interpreting Classification Models.'
 date: 2022-03-18
 permalink: /posts/2022/03/logistic-regression/
 excerpt_separator: <!--more-->
@@ -9,7 +9,7 @@ tags:
   - stochastic
 ---
 
-This post provides an in detail discussion on the Logistic Regression algorithm and its implementation from scratch using Python.
+This post provides an in-detail discussion of the Logistic Regression algorithm with Real-World example and its implementation from scratch using Python.
 
 <!--more-->
 

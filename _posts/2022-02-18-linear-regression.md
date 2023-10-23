@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Linear Regression'
+title: 'The Complete Tutorial on Linear Regression using Python: Theory, Implementation with Real-World Example.'
 date: 2022-02-18
 permalink: /posts/2022/02/linear-regression/
 excerpt_separator: <!--more-->
@@ -10,7 +10,7 @@ tags:
   - mini-batch gradient
 ---
 
-This post provides an in detail discussion on the Linear Regression algorithm and its implementation from scratch using Python.
+This post provides an in-depth discussion of the Linear Regression algorithm and its implementation from scratch using Python.
 
 <!--more-->
 

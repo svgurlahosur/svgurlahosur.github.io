@@ -1,5 +1,5 @@
 ---
-title: 'Neural Network Backpropagation numerical example with implementation using Python'
+title: 'Mastering Multilayer Perceptrons: Understanding Forward and Backpropagation with Numerical Example using Python.'
 date: 2023-03-18
 permalink: /posts/2023/01/neuarl-network/
 excerpt_separator: <!--more-->
@@ -12,7 +12,7 @@ tags:
   - MLP
 ---
 
-This post discusses Neural Networks, particularly Multi-layer Perceptron (MLP), and delves with a numerical example for forward and backpropagation along with its Python implementation.
+This post discusses Neural Networks, particularly Multilayer Perceptron (MLP), and delves with a step-by-step numerical example for forward and backpropagation along with its Python implementation.
 
 <!--more-->
 
