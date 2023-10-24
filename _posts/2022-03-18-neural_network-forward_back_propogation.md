@@ -1,5 +1,5 @@
 ---
-title: 'Mastering Multilayer Perceptrons: Understanding Forward and Backpropagation with Numerical Example using Python.'
+title: 'Mastering Multilayer Perceptrons: understanding forward and backpropagation with numerical example using Python.'
 date: 2023-03-18
 permalink: /posts/2023/01/neuarl-network/
 excerpt_separator: <!--more-->
