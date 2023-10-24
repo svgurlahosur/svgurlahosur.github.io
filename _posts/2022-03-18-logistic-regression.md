@@ -1,5 +1,5 @@
 ---
-title: 'Complete Logistic Regression Tutorial using Python: Understanding Mathematics, Building, and Interpreting Classification Models.'
+title: 'Complete Logistic Regression tutorial using Python: Understanding mathematics, building, and interpreting classification models.'
 date: 2022-03-18
 permalink: /posts/2022/03/logistic-regression/
 excerpt_separator: <!--more-->
@@ -41,6 +41,8 @@ Let us consider the dataset from the [National Institute of Diabetes and Digesti
 
 
 <script src="https://gist.github.com/svgurlahosur/49475ad3d298ddf0dfb492e0c317bf57.js"></script>
+
+Visit the [training](https://github.com/svgurlahosur/Machine-Learning/blob/main/Logistic-Regression/dataset/train_data.csv) and [testing](https://github.com/svgurlahosur/Machine-Learning/blob/main/Logistic-Regression/dataset/test_data.csv) for the complete data.
 
 Since the dataset has eight features, and each feature has a different range of values, we need to normalize the values in the features for the dataset. The normalization process changes the values of all features in the dataset to a common scale without distorting differences in the ranges of values. The data normalization ensures that all features in a dataset are on a common scale, enabling fair comparisons and stable model performance during machine learning.
 

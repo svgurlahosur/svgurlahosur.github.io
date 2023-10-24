@@ -1,5 +1,5 @@
 ---
-title: 'Complete Tutorial on Linear Regression using Python: Theory, Implementation with Real-world Example.'
+title: 'Complete tutorial on Linear Regression using Python: theory, implementation with real-world example.'
 date: 2022-02-18
 permalink: /posts/2022/02/linear-regression/
 excerpt_separator: <!--more-->
