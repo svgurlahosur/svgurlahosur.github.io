@@ -74,8 +74,6 @@ social:
 # Analytics
 analytics:
   provider               : "google-analytics-4" #"goatcounter" # false (default), "google", "google-universal", "custom", "goatcounter"
-  google:
-    tracking_id          : "G-EMF4VY32WN"
 
 # Site Author
 author:
