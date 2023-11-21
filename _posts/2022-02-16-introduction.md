@@ -48,9 +48,9 @@ Building any Machine Learning model/hypothesis involves two main phases: trainin
 <img src="/images/posts/introduction/machine_learning.png" alt="drawing" style="width:700px;"/>
 
 $$
-Figure\text{ 1: Different phases during Machine Learning}
+Figure\text{ 1: Phases during Machine Learning}
 $$
 
-In the training phase, the machine learning algorithm builds a model using the training data to make predictions or classifications depending on the type of algorithms built. It involves steps like data preprocessing, model training, and hyperparameter tuning to optimize the model's parameters for accurate predictions. The model is evaluated using various metrics, such as accuracy, MSE, precision, recall, and F1-score, depending on the ML algorithm.
+In the **training phase**, the machine learning algorithm builds a model using the training data to make predictions or classifications depending on the type of algorithms built. It involves steps like data preprocessing, model training, and hyperparameter tuning to optimize the model's parameters for accurate predictions. The model is evaluated using various metrics, such as accuracy, MSE, precision, recall, and F1-score, depending on the ML algorithm.
 
-In the testing phase, we evaluate the model performance and its generalization capabilities using the testing dataset, which is not exposed to the model during the training phase. Evaluation metrics used during the training phase will be used here also, and the model's performance will be compared with training performance and expectations. If the model aligns with our expectations, it can be deployed in solving real-world applications. We may have to revise your hypothesis or consider retraining the model by hyperparameter tuning.
+In the **testing phase**, we evaluate the model performance and its generalization capabilities using the testing dataset, which is not exposed to the model during the training phase. Evaluation metrics used during the training phase will be used here also, and the model's performance will be compared with training performance and expectations. If the model aligns with our expectations, it can be deployed in solving real-world applications. We may have to revise your hypothesis or consider retraining the model by hyperparameter tuning.
