@@ -17,13 +17,15 @@ This post discusses Neural Networks, particularly Multilayer Perceptron (MLP), a
 <!--more-->
 
 # Introduction
-The Multi-layer Perceptron is a powerful and popular neural network architecture that has significantly impacted machine learning, pattern recognition, and deep learning. MLPs are known for learning intricate patterns and making precise predictions. This post focuses on the detailed analysis of forward and backpropagation in MLPs, examining their fundamental concepts, mechanisms, advantages, difficulties, and influence on artificial intelligence. Every MLP will have one input layer, one or more hidden layers, and one output layer.
+The Multi-layer Perceptron is a powerful and popular neural network architecture that has significantly impacted machine learning, pattern recognition, and deep learning. MLPs are known for learning intricate patterns and making precise predictions. This post focuses on the detailed analysis of forward and backpropagation in MLPs, examining their fundamental concepts, mechanisms, advantages, difficulties, and influence on artificial intelligence.
 
-The MLP shown in <a href="#image-name">Figure 1</a> has one input layer, one hidden layer, and one output layer. The input layer has three input neurons represented by the three nodes ($x_1, x_2, x_3$) in the input layer and two bias neurons represented by the two bias nodes ($b_1, b_2$). The hidden layer consists of two neurons, also known as hidden units($h_1, h_2$) and two bias units ($b_3, b_4$). The number of neurons in the output layer is determined by the problem being solved. For example, in a binary classification task, two output neurons might represent the two possible classes.
+The structure/design of every MLP will have one input layer, one or more hidden layers, and one output layer. The MLP shown in <a href="#image-name">Figure 1</a> has one input layer, one hidden layer, and one output layer. The input layer has three input neurons represented by the three nodes ($x_1, x_2, x_3$) in the input layer and two bias neurons represented by the two bias nodes ($b_1, b_2$). The hidden layer consists of two neurons, also known as hidden units ($h_1, h_2$) and two bias units ($b_3, b_4$). The output layer has a total of two neurons ($y_1, y_2$). The number of neurons in the input layer is determined by the number of features/inputs. If the input is an image, then the total number of pixels. The number of layers and number of neurons in each hidden layer is determined by the problem being solved and the AI designer. The number of neurons in the output layer depends on the problem being solved. For example, two output neurons might represent the two possible classes in a binary classification task.
 
 The training of MLP mainly involves two steps: forward propagation and backpropagation. Forward propagation refers to calculating the output of an MLP for a given set of input data. Backpropagation is used to update the weights and biases of the neural network to minimize the error or loss function based on the gradients so that the predicted output will be same or as close as possible to the actual output. 
 
-<img src="/images/posts/neural-network/1.png" alt="Alt Text" id="image-name" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/1.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 1: Multi Layer Perceptron}
@@ -41,14 +43,14 @@ $$
 
 The Forward propagation, also known as feedforward, is the initial phase of training an MLP. It involves passing input data through the network’s layers, where each neuron calculates a weighted sum of its inputs and applies an activation function to produce an output. The process continues layer by layer until the final layer generates the network’s prediction. This process can divided into the following steps:
 
-1. Initialization of inputs and network parameters: The input layer is initialized with the input data, and all the neurons and biases of MLP will be initialized with some initial values.
-2. Weighted Sum Calculation: Each neuron in the current layer computes the weighted sum of its inputs, including the inputs, corresponding weights, and biases.
-3. Activation Function: The weighted sum is then passed through an activation function, introducing non-linearity into the network. The specific type of activation function used can vary, but common choices include the sigmoid, tanh, or relu functions. In this discussion, we have considered the sigmoid as the activation function.
-4. Intermediate Output calculation: The outputs from the current layer are sent as inputs to the next layer.
-5. Iteration: Steps 2-4 are repeated for all the hidden layers until the output layer is reached.
-6. Network output calculation: The final layer’s output values act as the network’s prediction and are used to improve the network performance further by calculating the error by comparing them against the actual outputs for the network.
+1. **Initialization of inputs and network parameters**: The input layer is initialized with the input data, and all the neurons and biases of MLP will be initialized with some initial values.
+2. **Weighted Sum Calculation**: Each neuron in the current layer computes the weighted sum of its inputs, including the inputs, corresponding weights, and biases.
+3. **Activation Function**: The weighted sum is then passed through an activation function, introducing non-linearity into the network. The specific type of activation function used can vary, but common choices include the sigmoid, tanh, or relu functions. In this discussion, we have considered the sigmoid as the activation function.
+4. **Intermediate Output calculation**: The outputs from the current layer are sent as inputs to the next layer.
+5. **Iteration**: Steps 2-4 are repeated for all the hidden layers until the output layer is reached.
+6. **Network output calculation**: The final layer’s output values act as the network’s prediction and are used to improve the network performance further by calculating the error by comparing them against the actual outputs for the network.
 
-Overall, the MLP with this configuration performs forward propagation by passing the input data through the hidden layer to the output layer, with each neuron applying weights and activation functions and producing outputs. In the considered example, with the current inputs ($x_1, x_2, x_3$), the network has to predict the outputs using all weights ($w_1, w_2, w_3, w_4, w_5, w_6, w_7, w_8, w_9 ,w_{10}$) and biases ($b_1, b_2, b_3, b_4$) so that the predicted output from node $y_1$ to be 0.01 and node $y_2$ to be 0.99.
+Overall, the MLP in <a href="#image-name">Figure 1</a> with the mentioned initial values for weights and bias performs forward propagation by passing the input data through the hidden layer to the output layer, with each neuron applying weights and activation functions and producing outputs. In the considered example, with the current inputs ($x_1, x_2, x_3$), the network has to predict the outputs using all weights ($w_1, w_2, w_3, w_4, w_5, w_6, w_7, w_8, w_9 ,w_{10}$) and biases ($b_1, b_2, b_3, b_4$) so that the predicted output from node $y_1$ to be 0.01 and node $y_2$ to be 0.99.
 
 
 ### **i. Input and output at hidden layer:**
@@ -93,7 +95,11 @@ $$
 out_{h2}=\frac{1}{1+e^{-in_{h2}}}=\frac{1}{1+e^{-0.57}}=0.638763175
 $$
 
-<img src="/images/posts/neural-network/2.png" alt="Alt Text" style="width:970px;">
+
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/2.png" alt="drawing" style="width:970px;"/>
+</div>
+
 
 $$
 Figure\text{ 2: MLP with input and output at the hidden layer}
@@ -142,7 +148,9 @@ out_{y2}=\frac{1}{1+e^{-in_{h2}}}=\frac{1}{1+e^{-1.12503631}}=0.754921705
 $$
 
 
-<img src="/images/posts/neural-network/3.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/3.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 3: MLP with input and output for both the layers}
@@ -178,15 +186,15 @@ $$
 
 The Backpropagation step in MLPs allows the network to learn from errors by adjusting weights and biases. This step propagates the error backward by updating weights and biases at each layer to minimize the difference between predicted and actual outputs. This process allows the network to make predictions or classify input data based on the learned patterns and connections between neurons. The chain rule of calculus is used in backpropagation efficiently to compute the gradient of the loss function at each layer, enabling accurate error calculation by all the weights and biases. This process can divided into the following steps
 
-1. Network error calculation: The output predicted from the network is compared with the actual output to calculate the total network error.
-2. Computation of gradients and weights and biases updation: The gradient of the error with respect to the weights and biases of the output layer is calculated, representing the direction and magnitude of the weight and bias modification needed to reduce the error. An optimization algorithm, such as gradient descent, will be used to update the weights and biases to reduce the error.
-3. Updation of parameters: The output layer weights and biases are updated using an optimization algorithm, such as gradient descent, which utilizes the calculated gradients to minimize the error iteratively.
-4. Propagation of error: The error information will be propagated backward to the previous layer by computing the error gradient with respect to the weights and biases of the previous layer. The weights and biases of the previous layer are modified using the calculated gradients with the gradient descent optimization algorithm.
-5. Iteration: Steps 4 is repeated for all hidden layers until the input layer is reached.
+1. **Network error calculation**: The output predicted from the network is compared with the actual output to calculate the total network error.
+2. **Computation of gradients and weights and biases updation**: The gradient of the error with respect to the weights and biases of the output layer is calculated, representing the direction and magnitude of the weight and bias modification needed to reduce the error. An optimization algorithm, such as gradient descent, will be used to update the weights and biases to reduce the error.
+3. **Updation of parameters**: The output layer weights and biases are updated using an optimization algorithm, such as gradient descent, which utilizes the calculated gradients to minimize the error iteratively.
+4. **Propagation of error**: The error information will be propagated backward to the previous layer by computing the error gradient with respect to the weights and biases of the previous layer. The weights and biases of the previous layer are modified using the calculated gradients with the gradient descent optimization algorithm.
+5. **Iteration**: Steps 4 is repeated for all hidden layers until the input layer is reached.
 
 To summarize, the forward propagation is used to calculate the error, and the backpropagation is used to update network parameters so that the error during the subsequent forward propagation will be less than the current error. During the training of MLP, both forward and back propagation will be done in a continuous loop for a specified number of times (epoch) to optimize the model parameters so that the error at the end will be significantly less compared to the first epoch error.
 
-The total error from the MLP with current weights and bias is 0.253380189, so let us calculate the optimized value for weights and bias using backpropagation with a learning rate of 0.5, so that error from MLP will be lesser than the current total error. In order to do that, we shall start with the weights($w_7, w_8, w_9, w_{10}$) and biases($b_3, b_4$) associated between the hidden layer and the output layer.
+The total error from the MLP with current weights and bias is 0.253380189, so let us calculate the optimized value for weights and bias using backpropagation with a learning rate of 0.5, so that error from MLP will be lesser than the current total error. In order to do that, we shall start with the weights ($w_7, w_8, w_9, w_{10}$) and biases ($b_3, b_4$) associated between the hidden layer and the output layer.
 
 ### **i. Weights between output and hidden layer:**
 
@@ -478,7 +486,9 @@ $$
 
 We have calculated all the weights ($w_7, w_8, w_9, w_{10}$) associated between the hidden layer and output layer.
 
-<img src="/images/posts/neural-network/4.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/4.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 4: MLP with updated weights between output and hidden layer}
@@ -582,7 +592,9 @@ $$
 
 All the weights and bias values associated between the hidden layer and the output layer are calculated. 
 
-<img src="/images/posts/neural-network/5.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/5.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 5: MLP with updated weights and biases between output and hidden layer}
@@ -665,8 +677,13 @@ let us substitute values from the equations \eqref{eq:31} and \eqref{eq:32} in t
 
 now let us use the values from the equations \eqref{eq:29} and \eqref{eq:33} and substitute into equation \eqref{eq:25} which is the first component of the equation \eqref{eq:24} 
 
+$$
+\frac{\partial E_{\text {total}}}{\partial out_{h1}} = \frac{\partial error_{\text {y1}}}{\partial out_{h1}} +\frac{\partial error_{\text {y2}}}{\partial out_{h1}} = 0.058296972 + (-0.019571847)
+$$
+
+
 \begin{equation}
-  \frac{\partial E_{\text {total}}}{\partial out_{h1}} = \frac{\partial error_{\text {y1}}}{\partial out_{h1}} +\frac{\partial error_{\text {y2}}}{\partial out_{h1}} = 0.058296972 + (-0.019571847) = 0.038725125
+  \frac{\partial E_{\text {total}}}{\partial out_{h1}} = 0.038725125
   \label{eq:34}
 \end{equation}
 
@@ -697,7 +714,7 @@ $$in_{h1}=w_1 * x_1+w_3 * x_2+w_5 * x_3+b_1 * 1$$
   \label{eq:36}
 \end{equation}
 
-let us put everything together now from equations \eqref{eq:34}  \eqref{eq:35} and \eqref{eq:36} into the equation \eqref{eq:24}
+let us put everything together now from equations \eqref{eq:34}, \eqref{eq:35}, and \eqref{eq:36} into the equation \eqref{eq:24}
 
 $$
 \frac{\partial E_{\text {total}}}{\partial w_1}=\frac{\partial E_{\text {total}}}{\partial out_{h1}} * \frac{\partial out_{h1}}{\partial in_{h1}} * \frac{\partial in_{h1}}{\partial w_1} = 0.038725125 * 0.238279982 * 0.1 = 0.009227422
@@ -877,8 +894,13 @@ $$
 
 let us use the values from equations \eqref{eq:48} and \eqref{eq:51} and substitute them into equation  \eqref{eq:45} which is the first component of the equation \eqref{eq:44}
 
+$$
+\frac{\partial E_{\text {total}}}{\partial out_{h2}} = \frac{\partial error_{\text {y1}}}{\partial out_{h2}} +\frac{\partial error_{\text {y2}}}{\partial out_{h2}} = 0.072871216 + (-0.023921146)
+$$
+
+
 \begin{equation}
-  \frac{\partial E_{\text {total}}}{\partial out_{h2}} = \frac{\partial error_{\text {y1}}}{\partial out_{h2}} +\frac{\partial error_{\text {y2}}}{\partial out_{h2}} = 0.072871216 + (-0.023921146) = 0.048950069
+  \frac{\partial E_{\text {total}}}{\partial out_{h2}} = 0.048950069
   \label{eq:52}
 \end{equation}
 
@@ -1013,10 +1035,12 @@ $$
 
 We have calculated all the weights ($w_1, w_2, w_3, w_4, w_5, w_6$) associated between the hidden layer and output layer.
 
-<img src="/images/posts/neural-network/6.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/6.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
-Figure\text{ 6: MLP with updated weights and biases between output and hidden layer, weights between input and hidden layer}
+Figure\text{ 6: MLP with updated weights between input and hidden layer}
 $$
 
 ### **iv. Biases between hidden and input layer:**
@@ -1105,7 +1129,9 @@ $$
 
 We have calculated all the biases ($b_1, b_2$) associated between the hidden layer and input layer.
 
-<img src="/images/posts/neural-network/7.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/7.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 7: MLP with updated weights and biases between both the layers}
@@ -1198,10 +1224,12 @@ $$
 out_{y2}=\frac{1}{1+e^{-in_{h2}}}=\frac{1}{1+e^{-1.162282206}}=0.761747156
 $$
 
-<img src="/images/posts/neural-network/8.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/8.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
-Figure\text{ 8: MLP with input and output for both the layers with updated weights and biases}
+Figure\text{ 8: MLP with input, output for both the layers with updated weights and biases}
 $$
 
 ### **i. Calculation of total error:**
@@ -1241,7 +1269,11 @@ The total error from the MLP before the updation of weights and bias was $0.2533
     Epoch: 500 Error: 0.000708482
 
 
-<img src="/images/posts/neural-network/error_w_b.png" alt="drawing" style="width:500px;"/>
+
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/error_w_b.png" alt="drawing" style="width:500px;"/>
+</div>
+
 
 ## 4. Forward propagation with only updated weights:
 
@@ -1328,7 +1360,9 @@ $$
 out_{y2}=\frac{1}{1+e^{-in_{h2}}}=\frac{1}{1+e^{-1.141780842}}=0.758006454
 $$
 
-<img src="/images/posts/neural-network/9.png" alt="Alt Text" style="width:970px;">
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/9.png" alt="drawing" style="width:970px;"/>
+</div>
 
 $$
 Figure\text{ 9: MLP with input and output for both the layers with updated weights}
@@ -1370,7 +1404,11 @@ The total error from the MLP before the updation of weights was $0.253380189$, a
     Epoch: 450 Error: 0.002269746
     Epoch: 500 Error: 0.001972481
 
-<img src="/images/posts/neural-network/error_w.png" alt="drawing" style="width:500px;"/>
+
+
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/error_w.png" alt="drawing" style="width:500px;"/>
+</div>
 
 
 ## 5. Analysis on the error obtained during training:
@@ -1379,7 +1417,10 @@ Now, let us analyze the error obtained for both methods and visualize how error 
 <script src="https://gist.github.com/svgurlahosur/8a57782dbaf4c94d1657c3281ef0d138.js"></script>
 
 
-<img src="/images/posts/neural-network/error_analysis.png" alt="drawing" style="width:700px;"/>
+<div style="text-align: center;">
+    <img src="/images/posts/neural-network/error_analysis.png" alt="drawing" style="width:700px;"/>
+</div>
+
 
     The total error from all epochs with weights and bias updation method is less.
 

@@ -22,7 +22,7 @@ Linear Regression is a Supervised Learning algorithm used to solve problems wher
 - Years of experience --> Salary of an employee
 - Area of the house --> Price of the house
 
-In all these examples, output/predicted values are continuous; hence, Linear Regression is used to build the machine learning model(hypothesis) and predict the output for a new set of inputs. To understand the working of the Linear Regression algorithm from a practical perspective, let us consider the problem of predicting an employee's salary based on various employee qualities. Now, to solve this problem to predict the employee salary with Linear Regression, we should apply the following four steps:
+In all these examples, output/predicted values are continuous; hence, Linear Regression is used to build the machine learning model (hypothesis) and predict the output for a new set of inputs. To understand the working of the Linear Regression algorithm from a practical perspective, let us consider the problem of predicting an employee's salary based on various employee qualities. Now, to solve this problem to predict the employee salary with Linear Regression, we should apply the following four steps:
 
 1. Data collection
 2. Model/hypothesis representation
@@ -34,16 +34,22 @@ In all these examples, output/predicted values are continuous; hence, Linear Reg
 
 Let us consider/collect sample data records of salary provided by the company to employees based upon one feature of employees, like years of experience. We call this Univariate Linear Regression since we use a single feature to predict the employee's salary.
 
-<img src="/images/posts/linear-regression/picture1.png" alt="drawing" style="width:310px;"/>
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture1.png" alt="drawing" style="width:310px;"/>
+</div>
 
-Instead of a single feature, if we use multiple features(qualities) of an employee to predict the salary, we call it Multi-variate Linear Regression.
 
-<img src="/images/posts/linear-regression/picture2.png" alt="drawing" style="width:580px;"/>
+Instead of a single feature, if we use multiple features (qualities) of an employee to predict the salary, we call it Multi-variate Linear Regression.
+
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture2.png" alt="drawing" style="width:580px;"/>
+</div>
+
 
 ***Note:*** 
-1. Number of samples(records) range from 1, 2, 3, 4, . . . ., m
-2. Number of features range from $x_0, x_1, x_2, x_3, . . . . x_n$ where $x_0$ is considered as 1
-3. Notation used to identify the dataset(superscript indicates the sample number and subscript indicates the feature number): $x^2$ - (3, 1, 5), $x^2_1$ - 3, $x^2_2$ - 1 and $x^4$ - (4, 1, 6)
+1. Number of samples(records) range from 1, 2, 3, 4, . . . ., m.
+2. Number of features range from $x_0, x_1, x_2, x_3, . . . . x_n$ where $x_0$ is considered as 1.
+3. Notation used to identify the dataset(superscript indicates the sample number and subscript indicates the feature number): $x^2$ - (3, 1, 5), $x^2_1$ - 3, $x^2_2$ - 1 and $x^4$ - (4, 1, 6).
 
 <script src="https://gist.github.com/svgurlahosur/c01e14f00a67ae85d668f64f0a10f8d7.js"></script>
 
@@ -52,7 +58,7 @@ Visit the [training](https://github.com/svgurlahosur/Machine-Learning/blob/main/
 
 ## 2. Model/hypothesis represenation
 
-The model/hypothesis ($h_\theta(x)$) approximates the target function by finding the relationship(pattern) between input features and output using linear operators (since data is linear). Hence we can define the hypothesis for Linear Regression algorithm as,
+The model/hypothesis ($h_\theta(x)$) approximates the target function by finding the relationship (pattern) between input features and output using linear operators (since data is linear). Hence we can define the hypothesis for Linear Regression algorithm as,
 
 
 $$
@@ -80,11 +86,11 @@ An optimization algorithm is used to iteratively update the model parameters unt
 
 ## 4. Optimization of model parameters
 
-The cost function calculates the error for any given values of model parameters($$\theta_0,\theta_1,\theta_2\ .\ .\theta_n$$), and the job of the optimization algorithm is to iteratively adjust the parameters based on the gradient (slope) of the cost function with respect to each parameter such that the error is minimized.
+The cost function calculates the error for any given values of model parameters ($$\theta_0,\theta_1,\theta_2\ .\ .\theta_n$$), and the job of the optimization algorithm is to iteratively adjust the parameters based on the gradient (slope) of the cost function with respect to each parameter such that the error is minimized.
 
 Hence, we initialize the model parameters with some initial values (hyperparameter initialization) that serve as the optimization process's starting point and update them to minimize the error. With the initialized values for parameters, we will get an error value. Still, the challenge here is to decide with obtained error whether we should increase the value of parameters or decrease them so that the error will be reduced with the modified parameters. If we decide on the choice (increase/decrease), the next challenge is the magnitude with which we should update them. Hence we can roughly imagine this problem where the model parameters are like vector elements with scope for optimization in both magnitude and direction.
 
-So, to minimize the error, with initial values for parameters, we calculate the gradient of the cost function with respect to each coefficient. The gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. It calculates the partial derivative of the cost function($$J\left(\theta\right)$$) with respect to each model parameter which represents the slope of the cost function in the direction of each parameter, indicating how the cost function changes with respect to changes in the parameters. 
+So, to minimize the error, with initial values for parameters, we calculate the gradient of the cost function with respect to each coefficient. The gradient descent is a first-order iterative optimization algorithm for finding a local minimum of a differentiable function. It calculates the partial derivative of the cost function ($$J\left(\theta\right)$$) with respect to each model parameter which represents the slope of the cost function in the direction of each parameter, indicating how the cost function changes with respect to changes in the parameters. 
 After calculating gradients for each parameter, we update the parameter in the opposite direction by a small fraction (learning rate) since the gradient gives the direction of the steepest ascent. The learning rate is a hyperparameter that controls the step size taken in each iteration of the optimization process. It determines how large or small the coefficient updates should be to ensure the algorithm converges effectively without overshooting the minimum.
 
 Hence, the generic parameter update formula is as follows,
@@ -167,17 +173,29 @@ The Hyperparameter Epochs define the number of times we perform the optimization
 ### **i. Stochastic gradient descent:**
 A single sample is used at every iteration to predict model output, calculate the error, and optimize the model parameters. This method is straightforward but computationally expensive to train models on large datasets with all samples. It can quickly give an insight into the model performance and converge faster, making it ideal for large datasets. The frequent updates can help escape local minima, but the noisy updates sometimes may lead to erratic convergence. 
 
-<img src="/images/posts/linear-regression/picture4.png" alt="drawing" style="width:770px;"/>
+
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture4.png" alt="drawing" style="width:770px;"/>
+</div>
+
 
 ### **ii. Batch gradient descent:**
 All the samples are used at every iteration to predict model output and calculate the error, resulting in a more accurate and stable estimation of gradients to optimize the model parameters. This method is ideal for convex or well-behaved loss surfaces, guaranteeing convergence to the global minimum. At the same time, this method is computationally expensive since the entire training dataset is loaded onto memory, particularly for larger datasets. This method will also struggle with non-convex loss surfaces and sometimes may lead to early convergence (local minima) with a less optimized set of parameters. 
 
-<img src="/images/posts/linear-regression/picture5.png" alt="drawing" style="width:770px;"/>
+
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture5.png" alt="drawing" style="width:770px;"/>
+</div>
 
 ### **iii. Mini batch gradient:**
 A batch of samples is used at every iteration to predict model output, calculate the error, and optimize the model parameters. This method combines the advantages of stochastic gradient descent and batch gradient descent by processing a random subset (mini-batch) of the samples at each iteration, making the model both stable and efficient. This method offers parallelism opportunities and can take advantage of hardware acceleration, and it is the most commonly used optimization of Deep Learning algorithms due to its scalability and versatility. Careful tuning of the batch size and learning rate can be used to balance computational efficiency and parameter update stability. Otherwise, it can lead to suboptimal convergence or inefficient models.
 
-<img src="/images/posts/linear-regression/picture6.png" alt="drawing" style="width:770px;"/>
+
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture6.png" alt="drawing" style="width:770px;"/>
+</div>
+
+
 
 **Note:** All the code snippets are based on the Stochastic gradient descent algorithm and refer the [Batch gradient descent](https://github.com/svgurlahosur/Machine-Learning/blob/main/Linear-Regression/Batch_Gradient_Descent.py) and [Mini batch gradient](https://github.com/svgurlahosur/Machine-Learning/blob/main/Linear-Regression/Mini_Batch_Gradient_Descent.py) for respective implementaion.
 
@@ -224,7 +242,11 @@ Graph plots to visualize how the training and testing errors are decresing as th
 <script src="https://gist.github.com/svgurlahosur/6b4ad067ec4f121e1d235454f60599ed.js"></script>
 
 
-<img src="/images/posts/linear-regression/picture3.png" alt="drawing" style="width:720px;"/>
+<div style="text-align: center;">
+    <img src="/images/posts/linear-regression/picture3.png" alt="drawing" style="width:720px;"/>
+</div>
+
+
 
 ## 5. Linear Regresion with Scikit library 
 Now, let us use the scikit-learn machine learning library to implement the Linear Regression algorithm and analyze the results.
