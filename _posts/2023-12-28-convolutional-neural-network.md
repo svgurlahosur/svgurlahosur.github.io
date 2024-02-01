@@ -630,7 +630,7 @@ In the backpropagation phase, gradients of this cross-entropy loss with respect 
 
 This iterative process of forward propagation, loss calculation, backpropagation, and parameter updation slowly optimizes the CNN to recognize complex patterns in the data, yielding improved performance and more accurate predictions. 
 
-So, in the ["next post"](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU), we do a from-scratch implementation of the Convolutional Neural Network using PyTorch for image classification tasks using the CIFAR-10 dataset. We shall practically see how the convolutional neural network takes images as input, produces output, and minimizes errors to improve the model performance of the image classification task.
+So, in the ["next post"](https://svgurlahosur.github.io/posts/2024/01/convolutional-neuarl-network-part-2/), we do a from-scratch implementation of the Convolutional Neural Network using PyTorch for image classification tasks using the CIFAR-10 dataset. We shall practically see how the convolutional neural network takes images as input, produces output, and minimizes errors to improve the model performance of the image classification task.
 
 
 # 7. References 

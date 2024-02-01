@@ -18,7 +18,7 @@ This post provides an in-depth understanding of Convolutional Neural Networks (C
 
 # Introduction:
 
-Convolutional Neural Networks (CNNs) are deep learning models designed to automatically and adaptively learn spatial hierarchies of features within images for tasks like classification, detection, and segmentation. In the previous post, we studied the theoretical concepts and the different types of layers a typical CNN might contain. In this post, we shall do a from-scratch implementation of the Convolutional Neural Network using PyTorch for image classification using the seven steps.
+Convolutional Neural Networks (CNNs) are deep learning models designed to automatically and adaptively learn spatial hierarchies of features within images for tasks like classification, detection, and segmentation. In the ["previous post"](https://svgurlahosur.github.io/posts/2023/04/convolutional-neuarl-network/) we studied the theoretical concepts and the different types of layers a typical CNN might contain. In this post, we shall do a from-scratch implementation of the Convolutional Neural Network using PyTorch for image classification using the seven steps.
 
 1. Download and Normalize the datasets
 2. Define the Convolutional Neural Network
