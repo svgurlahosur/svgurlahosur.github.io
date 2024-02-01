@@ -24,12 +24,11 @@ Convolutional Neural Networks (CNNs) are deep learning models designed to automa
 2. Define the Convolutional Neural Network
 3. Define the model, loss function, and optimization algorithm
 4. Train the model on the training dataset
-5. Test the model on the testing dataset 
-6. Infer the performance of the model
-7. Saving and loading the trained model
-8. Applying the trained model to general data
-
-
+5. Validate the model using training dataset
+6. Validate the model using testing dataset
+7. Early stopping the model training
+8. Visualize the model training process
+9. Load the trained model and apply to general data
 
 
 # 1. Download and Normalize the datasets:
