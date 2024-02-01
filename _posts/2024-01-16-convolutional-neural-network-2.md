@@ -46,7 +46,7 @@ So, we will build a transformation to convert images into multi-dimensional tens
     Files already downloaded and verified
 
 
-PyTorch employs dataloader functionality with torch.utils.data.DataLoader, which encapsulates the training/testing dataset and defines a DataLoader (train/testloader) that manages the data in batches, specifically with defined batch size samples. Batching allows for more efficient processing, as the model updates its parameters based on these batches rather than individual data points, improving computational speed and memory usage. The `shuffle=True` argument randomizes the order of samples within each batch, ensuring that the model does not learn from the sequence of data and instead generalizes better by being exposed to varied samples in each iteration.
+PyTorch employs dataloader functionality with ["torch.utils.data.DataLoader"](https://pytorch.org/docs/stable/data.html#torch.utils.data.DataLoader) which encapsulates the training/testing dataset and defines a DataLoader (train/testloader) that manages the data in batches, specifically with defined batch size samples. Batching allows for more efficient processing, as the model updates its parameters based on these batches rather than individual data points, improving computational speed and memory usage. The `shuffle=True` argument randomizes the order of samples within each batch, ensuring that the model does not learn from the sequence of data and instead generalizes better by being exposed to varied samples in each iteration.
 
 <script src="https://gist.github.com/svgurlahosur/b525cf1b74b04eb284b1abb7796cf0dc.js"></script>
 
@@ -63,7 +63,7 @@ Now, we shall also try to visualize the training images to see how the images fr
 
 # 2. Define the Convolutional Neural Network:
 
-To define the Convolutional Neural Network, we inherit the `nn.Module` class in PyTorch, which is a fundamental building block for creating neural network architectures. The `nn.Module` enables users to define and organize layers, parameters, and operations of a neural network in a structured and modular manner. The class that we use to define the CNN will have two methods:
+To define the Convolutional Neural Network, we inherit the ["nn.Module"](https://pytorch.org/docs/stable/generated/torch.nn.Module.html) class in PyTorch, which is a fundamental building block for creating neural network architectures. The `nn.Module` enables users to define and organize layers, parameters, and operations of a neural network in a structured and modular manner. The class that we use to define the CNN will have two methods:
 
 <script src="https://gist.github.com/svgurlahosur/c6a9566d7e3f253ca6a91bc2890d4737.js"></script>
 
@@ -79,7 +79,7 @@ This method specifies the sequence of operations/layers defined in the __init__ 
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ Figure 1: Architecture of a sample Convolutional Neural Network}
 $$
 
 Let us consider the CNN architecture shown in Figure 1 and define a class to represent it. To implement the architecture, let us understand the organization of layers in the architecture.
@@ -151,7 +151,7 @@ Now, we shall define the forward method to implement the forward pass for the ne
 
 Now, we shall create an instance/object of a class Network as model representing the neural network architecture, such as the number of layers, types of layers, initial weights, bias, and kernel/filter values for all the layers.
 
-Then we use nn.CrossEntropyLoss() loss function to create a variable criterion. The Cross-Entropy Loss is commonly used for classification problems where the goal is to minimize the difference between predicted class probabilities and the true class labels. We also create an instance of the Adam optimizer for updating the model's parameters during training to minimize the defined loss with a learning rate of 0.001.
+Then we use  ["nn.CrossEntropyLoss()"](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) loss function to create a variable criterion. The Cross-Entropy Loss is commonly used for classification problems where the goal is to minimize the difference between predicted class probabilities and the true class labels. We also create an instance of the Adam optimizer for updating the model's parameters during training to minimize the defined loss with a learning rate of 0.001.
 
 Finally, we check for the availability of a GPU, and if a GPU is available, the device is set to "cuda"; otherwise, it defaults to "cpu" and moves the entire net model to the specified device. If a GPU is available, this step enables the model to leverage GPU acceleration during training, significantly speeding up the computations.
 
@@ -541,7 +541,7 @@ Once the model is trained, we shall do a graphical visualization of various metr
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ 2: Graph plot to analyse overall top-1 accuracy}
 $$
 
 **ii.** Let us plot a graph to illustrate the progression of training and testing loss throughout the model training epochs to get insights into its learning and generalization ability.
@@ -554,7 +554,7 @@ $$
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ 3: Graph plot to analyse overall loss}
 $$
 
 **iii.** Let us plot a graph to illustrate the progression of training and testing Top-5 accuracy throughout the model training epochs to get insights into its learning and generalization ability.
@@ -566,7 +566,7 @@ $$
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ 4: Graph plot to analyse overall top-5 accuracy}
 $$
 
 **iv.** Let us plot a per-class accuracy graph on the training dataset to see the model's ability to distinguish between specific classes and observe class-specific learning and generalization ability throughout the model training.
@@ -578,7 +578,7 @@ $$
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ 5: Graph plot to analyse overall per-class top-1 accuracy on training dataset}
 $$
 
 **v.** Let us plot a per-class accuracy graph on the testing dataset to see the model's ability to distinguish between specific classes and observe class-specific learning and generalization ability throughout the model training.
@@ -590,7 +590,7 @@ $$
 </div>
 
 $$
-Figure\text{ 1: Multi Layer Perceptron}
+Figure\text{ 6: Graph plot to analyse overall per-class top-1 accuracy on testing dataset}
 $$
 
 
@@ -621,7 +621,7 @@ We can observe our model classified the input image to the correct class. Let us
 
 Our model has an accuracy of 69.02 %, and in both cases, it has classified input images to their correct class. But it may not always be true. You can take a sample image and check the model prediction on the best-trained model.
 
-To sum up, the part 1 and part 2 posts about implementing Convolutional Neural Networks with PyTorch for image classification have covered essential aspects, from CNN architecture to practical PyTorch application, offering a concise guide for building powerful image classification models.
+To sum up, the ["previous"](https://svgurlahosur.github.io/posts/2023/04/convolutional-neuarl-network/) and current posts illustrate about implementing Convolutional Neural Networks with PyTorch for image classification have covered essential aspects, from CNN architecture to practical PyTorch application, offering a concise guide for building powerful image classification models.
 
 # 10. References:
 
