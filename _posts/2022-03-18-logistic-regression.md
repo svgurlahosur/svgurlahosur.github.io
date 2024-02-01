@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 toc: true
 tags:
   - classification
-  - stochastic
+  - logistic regression
 ---
 
 This post provides an in-detail discussion of the Logistic Regression algorithm with Real-World example and its implementation from scratch using Python.
@@ -28,7 +28,7 @@ In all the examples, output/predicted values are discrete; hence, Logistic regre
 4. Optimization of model parameters
 
 
-## 1. Data Collection
+# 1. Data Collection
 
 Let us consider the dataset from the [National Institute of Diabetes and Digestive and Kidney Diseases](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2245318/). The objective of the dataset is to diagnostically predict whether or not a patient has diabetes, based on certain diagnostic measurements included in the dataset. The datasets consists of several medical predictor variables/features(their BMI, insulin level, age, and so on) and one target variable/output(whether or not a patient has diabetes).
 
@@ -51,7 +51,7 @@ Several data normalization techniques include Min-Max Normalization, Z-Score Sta
 <script src="https://gist.github.com/svgurlahosur/dbd3ee178e7e53bd3ae149f4281812ab.js"></script>
 
 
-## 2. Model/hypothesis represenation
+# 2. Model/hypothesis represenation
 
 The model/hypothesis($h_\theta(x)$) approximates the target function by finding a relationship(pattern) between input and output. The hypothesis used in Linear regression($h_{\theta}(x)=\theta^{T}x$) cannot be utilized directly here since it predicts continuous values; we want it to be predicting discrete values and in the considered problem it is either '0' or '1'. Hence we go for new hypothesis called sigmoid function($g\left(\theta^{T} x\right)$) also called a squashing function as its domain is the set of all real numbers, and its range is (0, 1).
 
@@ -73,7 +73,7 @@ else $$ h_\theta(x) < 0.5 $$, we will consider that $$ h_\theta(x) = 0 $$
 
 <script src="https://gist.github.com/svgurlahosur/e187f2875d5aded34e6f74271358b1b5.js"></script>
 
-## 3. Cost function
+# 3. Cost function
 
 The cost function($$J(\theta)$$) is a metric to measure how well the model/hypothesis($h_\theta(x)$) predicts outputs (Y) for a given input (X). The cost function used in Linear regression cannot be used here since it contains many minima since it is a non-convex function. The sigmoid function, which is our hypothesis, is non-linear and might get stuck in a local minima. Hence, we need a cost function that is convex in nature so that the gradient descent algorithm can reach the global minima.
 
@@ -122,7 +122,7 @@ $$
 <script src="https://gist.github.com/svgurlahosur/0d5bf2a0495b1335062d9e8073b75405.js"></script>
 
 
-## 4. Optimization
+# 4. Optimization
 
 The cost function calculates the error for any given values of model parameters($$\theta_0,\theta_1,\theta_2\ .\ .\theta_n$$), and the job of the optimization algorithm is to iteratively adjust the parameters based on the gradient (slope) of the cost function with respect to each parameter such that the error is minimized.
 
@@ -166,7 +166,7 @@ $$
 
 here $$ h_{\theta}(x) $$ is sigmoid function, where $$ h_{\theta}(x)=\frac{1}{1+e^{-z}} $$
 
-### **i. Derivative of sigmoid function:**
+## **i. Derivative of sigmoid function:**
 
 before processding further, let us calculate the derivative sigmoid function first as it ease the work of calculating the partial derivative of cost function $J(\theta)$ with respect to each model parameter
 
@@ -211,7 +211,7 @@ $$
 \frac{d}{dx} h_{\theta}(x) = h_{\theta}(x) (1-h_{\theta}(x))
 $$
 
-### **ii. Derivative of log loss cost function:**
+## **ii. Derivative of log loss cost function:**
 
 Now let us get back to original equation (XX) for calculating the paritial derivate of the cost function($$J(\theta)$$) with respect to each model parameter,
 
@@ -221,41 +221,41 @@ $$
 
 
 $$
-=-\left[y \frac{1}{h_{\theta}(x)} \frac{\partial}{\partial \theta_{j}} h_{\theta}(x)+\log h_{\theta}(x) \cdot 0+(1-y) \frac{1}{\left(1-h_{\theta}(x)\right.} \frac{\partial}{\partial \theta_{j}}-h_{\theta}(x)+\log \left(1-h_{\theta}(x)\right) .0\right]
+=-\left[y \frac{1}{h_{\theta}(x)} \frac{\partial}{\partial \theta_{j}} h_{\theta}(x)+\log h_{\theta}(x) \cdot 0+(1-y) \frac{1}{\left(1-h_{\theta}(x)\right.)} \frac{\partial}{\partial \theta_{j}}-h_{\theta}(x)+\log \left(1-h_{\theta}(x)\right) .0\right]
 $$
 
 
 $$
-=-\left[y \frac{1}{h_{\theta}(x)} \frac{\partial}{\partial \theta_{j}} h_{\theta}(x)+(1-y) \frac{1}{\left(1-h_{\theta}(x)\right.} \frac{\partial}{\partial \theta_{j}}-h_{\theta}(x)\right]
+=-\left[y \frac{1}{h_{\theta}(x)} \frac{\partial}{\partial \theta_{j}} h_{\theta}(x)+(1-y) \frac{1}{\left(1-h_{\theta}(x)\right.)} \frac{\partial}{\partial \theta_{j}}-h_{\theta}(x)\right]
 $$
 
 since hypothesis $h_\theta(x) = g(z)$, where z = $\theta^{T} x$, we can replace $h_{\theta}(x)$ by $g(\theta^{T} x)$
 
 
 $$
-=-\left[y \frac{1}{g\left(\theta^{T} x\right)} \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)+(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.} \frac{\partial}{\partial \theta_{j}}-g\left(\theta^{T} x\right)\right]
+=-\left[y \frac{1}{g\left(\theta^{T} x\right)} \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)+(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.)} \frac{\partial}{\partial \theta_{j}}-g\left(\theta^{T} x\right)\right]
 $$
 
 
 $$
-=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.}\right) \cdot \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)\right]
+=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.)}\right) \cdot \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)\right]
 $$
 
 by using the earlier calculated derivative of the sigmoid function, we can write the derivative of $g (\theta^{T} x)$ as $g(\theta^{T} x) (1-g(\theta^{T} x))$
 
 $$
-=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right)\right) \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)\right]
+=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.)}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right)\right) \frac{\partial}{\partial \theta_{j}} g\left(\theta^{T} x\right)\right]
 $$
 
 the $\theta^{T}x$ = $\theta_{0} x_{0}+\theta_{1} x_{1}+\theta_{2} x_{2}+\ldots+\theta_{n} x_{n}$
 
 
 $$
-=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right)\right) \frac{\partial}{\partial \theta_{j}}\left(\theta_{0} x_{0}+\theta_{1} x_{1}+\theta_{2} x_{2}+\ldots .+\theta_{n} x_{n}\right)\right]
+=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.)}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right)\right) \frac{\partial}{\partial \theta_{j}}\left(\theta_{0} x_{0}+\theta_{1} x_{1}+\theta_{2} x_{2}+\ldots .+\theta_{n} x_{n}\right)\right]
 $$
 
 $$
-=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right) \cdot x_{j}\right)\right]
+=-\left[\left(y \frac{1}{g\left(\theta^{T} x\right)}-(1-y) \frac{1}{\left(1-g\left(\theta^{T} x\right)\right.)}\right) \cdot g\left(\theta^{T} x\right)\left(1-g\left(\theta^{T} x\right) \cdot x_{j}\right)\right]
 $$
 
 $$
@@ -379,7 +379,7 @@ Graph plots to visualize how the training and testing accuracy are increasing as
 <img src="/images/posts/logistic-regression/accuracy.png" alt="drawing" style="width:520px;"/>
 
 
-## 5. Logistic Regresion with Scikit library 
+# 5. Logistic Regresion with Scikit library 
 Now, let us use the scikit-learn machine learning library to implement the Logistic Regression algorithm and analyze the results.
 
 <script src="https://gist.github.com/svgurlahosur/6dcb2627e453a2587867188b4eb0e7b9.js"></script>
@@ -397,11 +397,11 @@ Now, let us also cross-check whether our accurcay calculation function has corre
     The testing accuracy of the model is 78.75
     The training accuracy of the model is 75.86206896551724
 
-## 6. Complete code Logistic Regression  
+# 6. Complete code Logistic Regression  
 
 <script src="https://gist.github.com/svgurlahosur/ee1ab886f69748e77e0b26b536706b66.js"></script>
 
-## 7. References:
+# 7. References:
 
 1. Machine Learning, Tom Mitchell, McGraw Hill, 1997.
 2. ["CS229: Machine Learning"](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) course by Andrew N G at Stanford, Autumn 2018.
