@@ -5,6 +5,7 @@ permalink: /posts/2022/02/linear-regression/
 excerpt_separator: <!--more-->
 toc: true
 tags:
+  - regression 
   - stochastic
   - batch gradient
   - mini-batch gradient
@@ -30,7 +31,7 @@ In all these examples, output/predicted values are continuous; hence, Linear Reg
 4. Optimization of model parameters
 
 
-## 1. Data Collection
+# 1. Data Collection
 
 Let us consider/collect sample data records of salary provided by the company to employees based upon one feature of employees, like years of experience. We call this Univariate Linear Regression since we use a single feature to predict the employee's salary.
 
@@ -56,7 +57,7 @@ Instead of a single feature, if we use multiple features (qualities) of an emplo
 Visit the [training](https://github.com/svgurlahosur/Machine-Learning/blob/main/Linear-Regression/dataset/train_salary.csv) and [testing](https://github.com/svgurlahosur/Machine-Learning/blob/main/Linear-Regression/dataset/test_salary.csv) for the complete data.
 
 
-## 2. Model/hypothesis represenation
+# 2. Model/hypothesis represenation
 
 The model/hypothesis ($h_\theta(x)$) approximates the target function by finding the relationship (pattern) between input features and output using linear operators (since data is linear). Hence we can define the hypothesis for Linear Regression algorithm as,
 
@@ -71,7 +72,7 @@ where $_\ \theta_0,\ \theta_1,\ \theta_2,\ \theta_3,\ \theta_4,\ .\ .\ \theta_n$
 
 <script src="https://gist.github.com/svgurlahosur/203db98d0c0dbb359ac1c7f1123e148c.js"></script>
 
-## 3. Cost function
+# 3. Cost function
 
 The cost function ($J(\theta)$) is a metric to measure how well the model/hypothesis ($h_\theta(x)$) predicts outputs (Y) for a given input (X). It calculates the average squared difference (MSE) between the predicted output from the model/hypothesis and actual output values. By convention, we put a one-half ($1/2$) constant to average squared difference (MSE) because, when we take the derivative of the cost function with respect to each model parameter for minimizing error, it will make some of the math a little bit simpler. The Linear Regression algorithm aims to minimize the cost(error) by finding the optimized values for model parameters.
 
@@ -84,7 +85,7 @@ where m = number of samples/records considered for calculating the cost/error
 
 An optimization algorithm is used to iteratively update the model parameters until convergence, where the cost function reaches a minimum value. Gradient descent is one such iterative optimization algorithm used to learn the Linear Regression model parameters to minimize the cost/error. 
 
-## 4. Optimization of model parameters
+# 4. Optimization of model parameters
 
 The cost function calculates the error for any given values of model parameters ($$\theta_0,\theta_1,\theta_2\ .\ .\theta_n$$), and the job of the optimization algorithm is to iteratively adjust the parameters based on the gradient (slope) of the cost function with respect to each parameter such that the error is minimized.
 
@@ -170,7 +171,7 @@ The parameter optimization process is performed in an iterative loop (epoch) unt
 The Hyperparameter Epochs define the number of times we perform the optimization process. As we progress with the optimization process with a predefined number of epochs, the error from the model starts decreasing. As said earlier, Gradient descent is one such iterative optimization algorithm used to learn the Linear Regression model parameters to minimize the cost/error. The gradient descent algorithm has three variations based on the number of samples(m) considered for calculating the error and optimizing the model parameters for convergence.
 
 
-### **i. Stochastic gradient descent:**
+## **i. Stochastic gradient descent:**
 A single sample is used at every iteration to predict model output, calculate the error, and optimize the model parameters. This method is straightforward but computationally expensive to train models on large datasets with all samples. It can quickly give an insight into the model performance and converge faster, making it ideal for large datasets. The frequent updates can help escape local minima, but the noisy updates sometimes may lead to erratic convergence. 
 
 
@@ -179,7 +180,7 @@ A single sample is used at every iteration to predict model output, calculate th
 </div>
 
 
-### **ii. Batch gradient descent:**
+## **ii. Batch gradient descent:**
 All the samples are used at every iteration to predict model output and calculate the error, resulting in a more accurate and stable estimation of gradients to optimize the model parameters. This method is ideal for convex or well-behaved loss surfaces, guaranteeing convergence to the global minimum. At the same time, this method is computationally expensive since the entire training dataset is loaded onto memory, particularly for larger datasets. This method will also struggle with non-convex loss surfaces and sometimes may lead to early convergence (local minima) with a less optimized set of parameters. 
 
 
@@ -187,7 +188,7 @@ All the samples are used at every iteration to predict model output and calculat
     <img src="/images/posts/linear-regression/picture5.png" alt="drawing" style="width:770px;"/>
 </div>
 
-### **iii. Mini batch gradient:**
+## **iii. Mini batch gradient:**
 A batch of samples is used at every iteration to predict model output, calculate the error, and optimize the model parameters. This method combines the advantages of stochastic gradient descent and batch gradient descent by processing a random subset (mini-batch) of the samples at each iteration, making the model both stable and efficient. This method offers parallelism opportunities and can take advantage of hardware acceleration, and it is the most commonly used optimization of Deep Learning algorithms due to its scalability and versatility. Careful tuning of the batch size and learning rate can be used to balance computational efficiency and parameter update stability. Otherwise, it can lead to suboptimal convergence or inefficient models.
 
 
@@ -248,7 +249,7 @@ Graph plots to visualize how the training and testing errors are decresing as th
 
 
 
-## 5. Linear Regresion with Scikit library 
+# 5. Linear Regresion with Scikit library 
 Now, let us use the scikit-learn machine learning library to implement the Linear Regression algorithm and analyze the results.
 
 <script src="https://gist.github.com/svgurlahosur/34ba649fdaf06c8742fa6a9ecfed3ef7.js"></script>
@@ -270,12 +271,12 @@ Now, let us also cross-check whether our cost calculation function has correctly
     The testing error is: 1.1759239574367335 with intercept: -0.3945541895403048 and coefficients: [9.49011317 6.07865011 8.490789  ]
 
 
-## 6. Complete code with Stochastic Gradient Descent  
+# 6. Complete code with Stochastic Gradient Descent  
 The complete code for Linear Regression with stochastic gradient descent algorithm is as follows.
 
 <script src="https://gist.github.com/svgurlahosur/2c3d67910981cdf48047ee4b4719d46a.js"></script>
 
-## 7. References:
+# 7. References:
 
 1. Machine Learning, Tom Mitchell, McGraw Hill, 1997.
 2. ["CS229: Machine Learning"](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) course by Andrew N G at Stanford, Autumn 2018.
