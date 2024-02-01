@@ -217,6 +217,7 @@ $$
 $$
 
 Where:
+- $C_{in}$ is the total number of channels in the input tensor.
 - $\\mathbf{I}_i \$ is the $i^{th}$ channel of the input tensor.
 - $\\mathbf{W}_i \$ is the corresponding filter channel for the $i^{th}$ input tensor channel.
 - $\\mathbf{(*)}\$ denotes the convolution operation between a single channel of the input and its corresponding filter.
