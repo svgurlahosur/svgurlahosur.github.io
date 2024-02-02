@@ -104,7 +104,7 @@ This post allows users to experiment with 2D convolution by defining input data 
         </div>
     </div>
     <div id="output"></div>
-    <script src="\files\html\1.js" defer></script>
+    <script src="\files\html\convolution.js" defer></script>
 </body>
 </html>
 
