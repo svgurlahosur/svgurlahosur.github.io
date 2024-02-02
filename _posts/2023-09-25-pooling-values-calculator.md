@@ -17,9 +17,6 @@ This post allows users to experiment with 2D pooling by defining input data shap
 
 <!--more-->
 
-
-
-
 <html>
 <head>
     <style>
