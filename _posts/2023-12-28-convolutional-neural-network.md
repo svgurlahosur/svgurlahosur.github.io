@@ -192,6 +192,8 @@ Figure\text{ 10: Convolution operation on image matrix with stride=2 and padding
 $$
 
 
+Visit ["this post"](https://svgurlahosur.github.io/posts/2023/02/convolution-feature-map-calculator/) to learn more about how the feature map size and values are calculated by playing with different input, stride, padding, and kernel size values.
+
 
 ## ii. Multi-channel input convolution:
 
@@ -390,6 +392,7 @@ $$
 Figure\text{ 19: Average-pooling operation on a given feature map}
 $$
 
+Visit ["this post"](https://svgurlahosur.github.io/posts/2023/04/convolutional-neuarl-network/) to learn more about how the feature map size and values are calculated by playing with different inputs and pooling filter size values.
 
 # 5. Fully connected layer:
 
