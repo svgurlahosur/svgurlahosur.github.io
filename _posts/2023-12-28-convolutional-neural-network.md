@@ -392,7 +392,7 @@ $$
 Figure\text{ 19: Average-pooling operation on a given feature map}
 $$
 
-Visit ["this post"](https://svgurlahosur.github.io/posts/2023/04/convolutional-neuarl-network/) to learn more about how the feature map size and values are calculated by playing with different inputs and pooling filter size values.
+Visit ["this post"](https://svgurlahosur.github.io/posts/2023/03/pooling-values-calculator/) to learn more about how the feature map size and values are calculated by playing with different inputs and pooling filter size values.
 
 # 5. Fully connected layer:
 
