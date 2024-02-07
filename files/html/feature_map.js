@@ -16,26 +16,32 @@ function calculateFeatureMap() {
     let result = '';
     let inputSizeField = document.getElementById('inputSize');
     let numChannelsField = document.getElementById('numChannels');
+
     if (operationType === 'convolution') {
         const filterSize = parseInt(document.getElementById('filterSizeValue').value);
         const stride = parseInt(document.getElementById('strideValue').value);
         const padding = parseInt(document.getElementById('paddingValue').value);
         const numFilters = parseInt(document.getElementById('numFiltersValue').value);
+
         let featureMapHeight, featureMapWidth;
-        if (stride === filterSize) {
-            featureMapHeight = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
-            featureMapWidth = 1;
-        } else {
-            featureMapHeight = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
-            featureMapWidth = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
-        }
+
+        featureMapHeight = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
+        
+        if ((inputSize - filterSize + 2 * padding) % stride === 0)
+            featureMapWidth = Math.floor((inputSize - filterSize + 2 * padding) / stride) + 1;
+        else
+            featureMapWidth = Math.floor((inputSize - filterSize + 2 * padding) / stride) + 1;
+
+        if (featureMapWidth < 1) featureMapWidth = 1; // Ensure minimum width is 1
+
         result = `Feature Map Size: [${featureMapHeight} * ${featureMapWidth} * ${numFilters}]`;
+
         const regex = /\[(\d+) \* (\d+) \* (\d+)\]/;
         const match = result.match(regex);
         if (match && match.length === 4) {
             inputSizeField.value = parseInt(match[1]); // Update Input Data Size
             numChannelsField.value = parseInt(match[3]); // Update Number of Channels
-            }
+        }
     } else {
         const poolingFilterSize = parseInt(document.getElementById('poolingFilterSize').value);
         const numChannels = parseInt(document.getElementById('numChannels').value);
@@ -46,7 +52,7 @@ function calculateFeatureMap() {
         if (match && match.length === 4) {
             inputSizeField.value = parseInt(match[1]); // Update Input Data Size
             numChannelsField.value = parseInt(match[3]); // Update Number of Channels
-            }
+        }
     }
     const outputDiv = document.getElementById('output');
     outputDiv.innerHTML = `<strong>${result}</strong>`;
