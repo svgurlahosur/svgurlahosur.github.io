@@ -26,15 +26,13 @@ function calculateFeatureMap() {
         let featureMapHeight, featureMapWidth;
 
         featureMapHeight = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
-        
-        if ((inputSize - filterSize + 2 * padding) % stride === 0)
-            featureMapWidth = Math.floor((inputSize - filterSize + 2 * padding) / stride) + 1;
-        else
-            featureMapWidth = Math.floor((inputSize - filterSize + 2 * padding) / stride) + 1;
+        featureMapWidth = Math.floor((inputSize + 2 * padding - filterSize) / stride) + 1;
 
-        if (featureMapWidth < 1) featureMapWidth = 1; // Ensure minimum width is 1
-
-        result = `Feature Map Size: [${featureMapHeight} * ${featureMapWidth} * ${numFilters}]`;
+        if ((inputSize - filterSize + 2 * padding) % stride === 0 && featureMapHeight > 0 && featureMapWidth > 0) {
+            result = `Feature Map Size: [${featureMapHeight} * ${featureMapWidth} * ${numFilters}]`;
+        } else {
+            result = `Feature Map Size: [0 * 0 * ${numFilters}]`;
+        }
 
         const regex = /\[(\d+) \* (\d+) \* (\d+)\]/;
         const match = result.match(regex);
