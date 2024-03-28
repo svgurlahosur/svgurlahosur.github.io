@@ -79,7 +79,7 @@ This method specifies the sequence of operations/layers defined in the __init__ 
 </div>
 
 $$
-Figure\text{ Figure 1: Architecture of a sample Convolutional Neural Network}
+Figure\text{1: Architecture of a sample Convolutional Neural Network}
 $$
 
 Let us consider the CNN architecture shown in Figure 1 and define a class to represent it. To implement the architecture, let us understand the organization of layers in the architecture.
