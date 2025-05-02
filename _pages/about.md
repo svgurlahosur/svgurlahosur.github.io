@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: ""
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,12 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-Research scholar working in Center for AI Research, KLE Technological University. My primary research interest lies in Artificial Intelligence, focused on designing Neural Architecture Search (NAS) methods to automate the network architecture engineering for a given problem with multi-objective optimization. I am involved in the Interdisciplinary Cyber-Physical Systems (ICPS), Department of Science and Technology, Govt. of India sponsored research project "Crowdsourcing Framework for Digital Archiving and Presentation of Cultural Heritage."
+Welcome to my personal blog! I am Sunil V. Gurlahosur, a researcher and faculty member at the Center for AI Research, School of Computer Science and Engineering, KLE Technological University. My work focuses on deep learning, machine learning for computer vision applications, with an emphasis on optimizing models for resource-constrained devices, such as mobile and embedded platforms.
 
+I specialize in developing NAS methods to automate network architecture engineering with multi-objective optimization, aiming to balance performance, accuracy, and resource efficiency. I also have experience in building custom datasets to address real-world problems in industrial automation, healthcare, and agriculture.
 
-As an Assistant Professor in the School of Computer Science and Engineering, I teach courses like Machine Learning, Exploratory Data Analysis, Python & Shell Scripting, and Principles of Compiler Design. I have undergone a training program at Samsung Research Institute, Bangalore, to handle a course on Embedded Intelligence and mentor the student's worklet under the Samsung PRISM program.
-
-
-I have experience carrying out projects to build custom datasets for real-world problems, design transfer-learning and from-scratch DNN models for computer vision tasks, optimize them for edge devices, etc. I have published my work as research papers in various Web of Science and Scopus-indexed book chapters, journals, and conference papers. I have pursued my Master's degree from the National Institute of Technology Karnataka, Surathkal, and my Bachelor's degree from Siddaganga Institute of Technology, Tumakuru.
-
-
+In addition to my research, I teach Machine Learning, Deep Learning, Exploratory Data Analysis, Python & Shell Scripting, and Principles of Compiler Design in the School of Computer Science and Engineering. For more details, please visit the [About me](https://svgurlahosur.github.io/aboutme/).
